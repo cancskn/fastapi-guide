@@ -1,37 +1,35 @@
-## Simple CRUD Example with FastAPI
+### FastAPI CRUD Examples
 
-A simple example demonstrating the CRUD operations using **FastAPI**.
+This folder contains two simple CRUD examples built with **FastAPI**.
 
 ---
 
-### Installation
+#### 1. simple.py
+CRUD using an in-memory Python list.  
+- No database, just a Python list to store items.  
+- Endpoints: Create, Read, Update, Delete.  
 
-```bash
-pip install fastapi
-```
-### To run the app
-
+Run:
 ```bash
 fastapi dev simple.py
 ```
+
+--- 
+
+#### 2. orm_db.py
+CRUD using SQLAlchemy with SQLite database.
+
+- Demonstrates ORM (Object Relational Mapping).
+- Items are stored in a real database table.
+
+Run:
+```bash
+fastapi dev orm_db.py
+```
+
 ---
 
-### Features
+#### Swagger UI
 
-- **Create (POST)** – Add a new item to the list  
-- **Read (GET)** – Retrieve all items from the list  
-- **Update (PUT)** – Update an existing item by its index  
-- **Delete (DELETE)** – Remove an item by its index
-
----
-
-### Swagger UI
-Interactive API docs are available at:
-```http://127.0.0.1:8000/docs```
-
-### Endpoints
-
-- `POST /items` – Create item  
-- `GET /items` – Read items  
-- `PUT /items/{item_id}` – Update item at index  
-- `DELETE /items/{item_id}` – Delete item at index
+Interactive API docs (for both examples) are available at:
+http://127.0.0.1:8000/docs
